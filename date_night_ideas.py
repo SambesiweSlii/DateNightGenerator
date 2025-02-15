@@ -16,10 +16,10 @@ print("Let's see what date night idea is in store for you today.")
 
 # this list holds the date ideas...
 # we can add and remove contents within the list.
-date_ideas = ['Wine Farm date', 'Aquarium date', 'Dinner date', 'Chasing the sunset date', 'Fair date', 'Weekend away date',
+date_ideas = ['Wine Farm date', 'Aquarium date', 'Dinner date', 'Chasing the sunset date', 'Arcade date', 'Bowling date', 'Fair date', 'Weekend away date',
               'Beach date', 'Picnic date', 'Game night date', 'Sip n Paint date', 'Stargazing date', 
-              'Movie date', 'Outdoor adventure date', 'Art gallery date', 'Exploring restaurants date'
-              , 'Road trip date', 'Junk Food date']
+              'Movie date', 'Art gallery date', 'Exploring restaurants date', 'Farmers Market date'
+              , 'Road trip date', 'Ziplining date', 'Quad bike date', 'Paintball shooting date', 'Painting and Pottery date']
 
 # the date variable will hold the randomly generated date idea
 date = random.choice(date_ideas)
@@ -41,6 +41,18 @@ print('\n')
 if answer == 'Yes' or answer == 'yes':
     print(f'You answered {answer}.')
     print(random.choice(date_ideas))
+    
+    while answer == 'Yes' or answer == 'yes':
+        print('\nAre you happy with this or would you like to go again?')
+        answer = str(input('Yes? / No? : '))
+        if answer == 'Yes' or answer == 'yes':
+            random_date = random.choice(date_ideas)
+            print(f'You answered {answer}.')
+            print(random_date)
+        elif answer == 'No' or answer == 'no': 
+            print(f'You answered {answer}.')
+            print(f'{random_date.upper()} it is then.')
+            
 elif answer == 'No' or answer == 'no': 
     print(f'You answered {answer}.')
-    print(f'{date.upper} it is then.')
+    print(f'{date.upper()} it is then.')
